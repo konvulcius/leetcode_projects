@@ -1,19 +1,20 @@
 package main
 
 type ListNode struct {
-     Val int
-     Next *ListNode
+	Val  int
+	Next *ListNode
 }
 
+// используем value semantic для работы с указателями списка
 func mergeKLists(lists []*ListNode) *ListNode {
 	if lists == nil || len(lists) == 0 {
 		return nil
 	}
 
 	var (
-		min **ListNode
+		min  **ListNode
 		head *ListNode
-		cur *ListNode
+		cur  *ListNode
 	)
 
 	for {
